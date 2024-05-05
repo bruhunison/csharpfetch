@@ -25,6 +25,7 @@ namespace C_fetch
             Console.WriteLine(Environment.MachineName);
             Console.WriteLine("-----------");
             Console.WriteLine("OS: " + OSVersion + " " + bits + "-Bit ");
+            Console.WriteLine("CPU: " + CPU);
 
             Console.ReadKey();
         }
