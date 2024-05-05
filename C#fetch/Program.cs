@@ -17,8 +17,8 @@ namespace C_fetch
             string bits = Environment.Is64BitOperatingSystem ? "64" : "32";
             
             //reading the cpu model from the registry, kinda hacky but it works.
-            string GETHKLMGETCPU = @"HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\CentralProcessor\0";
-            string CPU = Registry.GetValue(GETHKLMGETCPU, "ProcessorNameString", "").ToString();
+            string GETHKLMCPU = @"HKEY_LOCAL_MACHINE\HARDWARE\DESCRIPTION\System\CentralProcessor\0";
+            string CPU = Registry.GetValue(GETHKLMCPU, "ProcessorNameString", "").ToString();
 
 
 
