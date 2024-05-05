@@ -12,6 +12,7 @@ namespace C_fetch
             string GETHKLMVERSION = @"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion";
             string OSVersion = Registry.GetValue(GETHKLMVERSION, "productName", "").ToString();
             string Build = Registry.GetValue(GETHKLMVERSION, "CurrentBuildNumber", "").ToString();
+            string DisplayVersion = Registry.GetValue(GETHKLMVERSION, "DisplayVersion", "").ToString();
 
             //using Environment.Is64BitOperatingSystem to pre set a string to be called later.
             string bits = Environment.Is64BitOperatingSystem ? "64" : "32";
@@ -25,6 +26,7 @@ namespace C_fetch
             Console.WriteLine(Environment.MachineName);
             Console.WriteLine("-----------");
             Console.WriteLine("OS: " + OSVersion + " " + bits + "-Bit ");
+            Console.WriteLine("Build: " + Build);
             Console.WriteLine("CPU: " + CPU);
 
             Console.ReadKey();
